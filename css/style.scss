@@ -7,13 +7,22 @@ body{
     height: 100vh;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 .welcomeBox{
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
-    min-width: 1200px;
+    flex-wrap: wrap;
+    min-width: 65%;
     &__loginBox{
+        text-align: center;
         background-color: #2C2F33;
         min-height: 500px;
         width: 75%;
@@ -21,11 +30,41 @@ body{
     &__loginBox--title{
         font-size: 55px;
         font-weight: 200;
-        margin-bottom: 25px;
         color: white;
     }
     &__loginBox--text{
-        margin-top: -18px;
         color: rgb(219, 219, 219);
+        margin-top: -17px;
+    }
+    &__loginForm{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        input{
+            background-color: rgba(255, 0, 0, 0);
+            border: unset;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.377);
+            margin-top: 15px;
+            color: rgb(216, 216, 216);
+            padding: 5px;
+        }
+        input::placeholder{
+            text-align: center;
+        }
+        input:focus::placeholder{
+            color:transparent;
+       }
+       button{
+           margin-top: 15px;
+           width: 20%;
+           border: unset;
+           background-color: rgb(128, 128, 128);
+           padding: 5px;
+           color: rgb(221, 221, 221);
+       }
+    }
+    &__loginForm--text{
+        color: rgb(204, 204, 204);
     }
 }

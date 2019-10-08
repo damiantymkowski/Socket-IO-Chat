@@ -13,6 +13,13 @@ body {
   height: 100vh;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
 .welcomeBox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24,10 +31,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-width: 1200px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-width: 65%;
 }
 
 .welcomeBox__loginBox {
+  text-align: center;
   background-color: #2C2F33;
   min-height: 500px;
   width: 75%;
@@ -36,12 +46,81 @@ body {
 .welcomeBox__loginBox--title {
   font-size: 55px;
   font-weight: 200;
-  margin-bottom: 25px;
   color: white;
 }
 
 .welcomeBox__loginBox--text {
-  margin-top: -18px;
   color: #dbdbdb;
+  margin-top: -17px;
+}
+
+.welcomeBox__loginForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.welcomeBox__loginForm input {
+  background-color: rgba(255, 0, 0, 0);
+  border: unset;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.377);
+  margin-top: 15px;
+  color: #d8d8d8;
+  padding: 5px;
+}
+
+.welcomeBox__loginForm input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+.welcomeBox__loginForm input:-ms-input-placeholder {
+  text-align: center;
+}
+
+.welcomeBox__loginForm input::-ms-input-placeholder {
+  text-align: center;
+}
+
+.welcomeBox__loginForm input::placeholder {
+  text-align: center;
+}
+
+.welcomeBox__loginForm input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.welcomeBox__loginForm input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.welcomeBox__loginForm input:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.welcomeBox__loginForm input:focus::placeholder {
+  color: transparent;
+}
+
+.welcomeBox__loginForm button {
+  margin-top: 15px;
+  width: 20%;
+  border: unset;
+  background-color: gray;
+  padding: 5px;
+  color: #dddddd;
+}
+
+.welcomeBox__loginForm--text {
+  color: #cccccc;
 }
 /*# sourceMappingURL=style.css.map */
