@@ -1,0 +1,47 @@
+body {
+  background-color: #eeeeee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Segoe UI;
+  height: 100vh;
+}
+
+.welcomeBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 1200px;
+}
+
+.welcomeBox__loginBox {
+  background-color: #2C2F33;
+  min-height: 500px;
+  width: 75%;
+}
+
+.welcomeBox__loginBox--title {
+  font-size: 55px;
+  font-weight: 200;
+  margin-bottom: 25px;
+  color: white;
+}
+
+.welcomeBox__loginBox--text {
+  margin-top: -18px;
+  color: #dbdbdb;
+}
+/*# sourceMappingURL=style.css.map */

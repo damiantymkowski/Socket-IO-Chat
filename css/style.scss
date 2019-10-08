@@ -1,0 +1,31 @@
+body{
+    background-color: rgb(238, 238, 238); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Segoe UI;
+    height: 100vh;
+}
+
+.welcomeBox{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-width: 1200px;
+    &__loginBox{
+        background-color: #2C2F33;
+        min-height: 500px;
+        width: 75%;
+    }
+    &__loginBox--title{
+        font-size: 55px;
+        font-weight: 200;
+        margin-bottom: 25px;
+        color: white;
+    }
+    &__loginBox--text{
+        margin-top: -18px;
+        color: rgb(219, 219, 219);
+    }
+}
