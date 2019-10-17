@@ -1,18 +1,30 @@
-const register = `<input type="text" id="loginNickname" placeholder="Nickname" required/>
-<input type="password" id="loginPassword" placeholder="Password" required/>
-<button id="registerBtn">Create Account</button>
-<p class="welcomeBox__loginForm--text">You must first accept our data privacy policy </p>`;
+const urlDataJSON = "https://my-json-server.typicode.com/damiantymkowski/Whatever/db";
+let home;
+let register;
+const registerButton = document.getElementById("wannaRegisterBtn");
+registerButton.addEventListener("click", alert("test"));
 
-const home = `<input type="text" id="loginNickname" placeholder="Nickname" required/>
-<input type="password" id="loginPassword" placeholder="Password" required/>
-<button id="loginBtn">Login</button>
-<button id="wannaRegisterBtn" onclick="onNavigate('/register'); return false;">I don't have an account yet</button>
-<p class="welcomeBox__loginForm--text">You must first accept our data privacy policy </p>`;
+fetch(urlDataJSON).then(
+    function(dataUI) {return dataUI.json();}
+)
 
+.then(
+    function(json){
+        home = json.home[0]["html"];
+        register = json.register[0]["html"];
+    }
+)
+
+.then(
+    function(){
 const routes = {
-'/' : home,
-'/register' : register
-};
+    '/' : home,
+    '/register' : register
+    };
+
+window.onpopstate = () => {
+    mainBox.innerHTML = routes[window.location.pathname]
+}
 
 const mainBox = document.querySelector(".welcomeBox__loginForm");
 mainBox.innerHTML = routes[window.location.pathname];
@@ -25,7 +37,6 @@ const onNavigate = (pathname) => {
     )
     mainBox.innerHTML = routes[pathname]
 }
-window.onpopstate = () => {
-    mainBox.innerHTML = routes[window.location.pathname]
-  }
-const registerButton = document.querySelector("#wannaRegisterBtn");
+    }
+)
+
