@@ -46,7 +46,17 @@ fetch(urlDataJSON).then(
             const registerURL = `Whatever/Whatever_server/adduser.php`;
             const nicknameInput = document.querySelector('#loginNickname').value;
             const passwordInput = document.querySelector('#loginPassword').value;
-    
+            const errorHandler = document.querySelector('.welcomeBox__loginForm--text');
+            const regPassword = /^(?=.*[A-Za-z])(?=.*\d)[A-za-z-\d]{8,}$/;
+            const regLogin = /^(?=.*[A-Za-z])[A-za-z-\d]{4,}$/;
+
+            if(!regPassword.test(passwordInput))
+            {
+                errorHandler.textContent = "Password must have minimum eight characters, at least one letter and one number";
+            }else if(!regLogin.test(nicknameInput))
+            {
+                errorHandler.textContent = "Login must have minimum four characters, [A-z-0-9]";
+            }else{
             const data = {
                 name: nicknameInput,
                 password: passwordInput
@@ -66,8 +76,9 @@ fetch(urlDataJSON).then(
     }).catch(function(){
             console.log("Błąd");
     });
-    
+            }
     };
-    createAccountBtn.addEventListener("click", createAccount);
+    createAccountBtn.addEventListener("click", createAccount);  
+
     });
 });
