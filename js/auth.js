@@ -1,5 +1,5 @@
 const userRegister = () =>{
-    const registerURL = 'whatever/Whatever_server/adduser.php';
+    const registerURL = 'Whatever/server/adduser.php';
     const registerButton = document.querySelector('#createAccountBtn');
     const boxInfo = document.querySelector('.welcomeBox__loginForm--text');
     

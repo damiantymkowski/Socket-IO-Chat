@@ -4,11 +4,9 @@ import { registerPage } from './pages/register.js'
 import { userRegister } from './auth.js'
 
 const routes = {
-    '/' : homePage,
+    '/whatever/' : homePage,
     '/register' : registerPage
 }
-
-contentBox.innterHTML = routes[window.location.pathname];
 
 window.onpopstate = () =>{
     contentBox.innerHTML = routes[window.location.pathname];
