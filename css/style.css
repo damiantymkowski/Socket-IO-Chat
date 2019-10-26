@@ -11,6 +11,10 @@ body {
           align-items: center;
   font-family: Segoe UI;
   height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 input:focus,
@@ -33,7 +37,8 @@ button:focus {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  min-width: 65%;
+  min-width: 45%;
+  z-index: 2;
 }
 
 .welcomeBox__loginBox {
@@ -112,8 +117,9 @@ button:focus {
 }
 
 .welcomeBox__loginForm button {
+  cursor: pointer;
   margin-top: 15px;
-  width: 20%;
+  width: 30%;
   border: unset;
   background-color: gray;
   padding: 5px;
@@ -122,5 +128,43 @@ button:focus {
 
 .welcomeBox__loginForm--text {
   color: #cccccc;
+}
+
+.myBackgroundColor {
+  display: block;
+  height: 330px;
+  width: 100%;
+  background-color: #33486d;
+  margin-top: -350px;
+  position: absolute;
+}
+
+.whateverBox__footer {
+  margin-top: 5px;
+  color: #868686;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 35%;
+}
+
+.whateverBox__footer p {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.whateverBox__footer p:nth-child(2) {
+  font-weight: 600;
 }
 /*# sourceMappingURL=style.css.map */
