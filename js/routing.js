@@ -13,7 +13,6 @@ window.onpopstate = () =>{
     registerViewLoad();
 }
 
-
 const onNavigate = (pathname) => {
     window.history.pushState(
         {},
