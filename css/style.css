@@ -1,20 +1,11 @@
 body {
   background-color: #eeeeee;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   font-family: Segoe UI;
   height: 100vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 input:focus,
@@ -25,56 +16,36 @@ button:focus {
 }
 
 .welcomeBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   min-width: 45%;
   z-index: 2;
 }
-
 .welcomeBox__loginBox {
   text-align: center;
   background-color: #2C2F33;
   min-height: 500px;
   width: 75%;
 }
-
 .welcomeBox__loginBox--title {
   font-size: 55px;
   font-weight: 200;
   color: white;
+  cursor: pointer;
 }
-
 .welcomeBox__loginBox--text {
   color: #dbdbdb;
   margin-top: -17px;
 }
-
 .welcomeBox__loginForm {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-
 .welcomeBox__loginForm input {
   background-color: rgba(255, 0, 0, 0);
   border: unset;
@@ -83,39 +54,12 @@ button:focus {
   color: #d8d8d8;
   padding: 5px;
 }
-
-.welcomeBox__loginForm input::-webkit-input-placeholder {
-  text-align: center;
-}
-
-.welcomeBox__loginForm input:-ms-input-placeholder {
-  text-align: center;
-}
-
-.welcomeBox__loginForm input::-ms-input-placeholder {
-  text-align: center;
-}
-
 .welcomeBox__loginForm input::placeholder {
   text-align: center;
 }
-
-.welcomeBox__loginForm input:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.welcomeBox__loginForm input:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.welcomeBox__loginForm input:focus::-ms-input-placeholder {
-  color: transparent;
-}
-
 .welcomeBox__loginForm input:focus::placeholder {
   color: transparent;
 }
-
 .welcomeBox__loginForm button {
   cursor: pointer;
   margin-top: 15px;
@@ -125,7 +69,6 @@ button:focus {
   padding: 5px;
   color: #dddddd;
 }
-
 .welcomeBox__loginForm--text {
   color: #cccccc;
 }
@@ -143,28 +86,71 @@ button:focus {
   margin-top: 5px;
   color: #868686;
   z-index: 3;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 35%;
 }
-
 .whateverBox__footer p {
   margin-bottom: 0px;
   margin-top: 0px;
 }
-
 .whateverBox__footer p:nth-child(2) {
   font-weight: 600;
 }
+
+.whateverInterface {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  min-height: 500px;
+  background-color: #4b4d4a;
+}
+.whateverInterface__navigation {
+  width: 100%;
+  display: flex;
+  height: 50px;
+  background-color: #444542;
+}
+.whateverInterface__navigation--logo {
+  color: #dadada;
+  font-weight: 200;
+  margin-left: 15px;
+}
+.whateverInterface__navigation--user {
+  color: #dadada;
+  margin-left: 60%;
+}
+.whateverInterface__navigation p {
+  width: 100%;
+}
+.whateverInterface__leftPanel--text {
+  color: #dadada;
+  font-weight: 200;
+  margin-left: 15px;
+}
+.whateverInterface__leftPanel--person {
+  display: flex;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+.whateverInterface__leftPanel--img {
+  width: 30px;
+  height: 30px;
+  margin-top: 3px;
+}
+.whateverInterface__leftPanel--user {
+  color: #dadada;
+  font-size: 13px;
+  margin-left: 10px;
+  margin-top: 1px;
+}
+.whateverInterface__leftPanel--recentMessage {
+  color: #858585;
+  font-size: 13px;
+  margin-left: -62px;
+  margin-top: 18px;
+}
+
 /*# sourceMappingURL=style.css.map */
