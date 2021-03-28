@@ -1,7 +1,7 @@
 <?php
 	try
 	{
-		$pdo = new PDO ('mysql:host=localhost;dbname=whatever;charset=utf8', 'whatever', 'whatpass');	
+		$pdo = new PDO ('mysql:host=localhost;dbname=whatever;charset=utf8', '', '');	
 	}
 	catch (PDOException $e)
 	{
